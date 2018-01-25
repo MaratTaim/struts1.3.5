@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+        "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean	name="NewsForm" type="com.epam.testapp.presentation.form.NewsForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <action	path="/News"
+                   type="com.epam.testapp.presentation.action.NewsAction"
+                   name="NewsForm"
+                   scope="request"
+                   input="addNews"
+                   parameter="dispatch"
+                   validate="true">
+            <forward name="list" path="newsList"/>
+            <forward name="view" path="viewNews"/>
+            <forward name="createModify" path="addNews"/>
+        </action>
+
+        <action path="/changeLocale" parameter="locale"
+                type="com.epam.testapp.presentation.action.LocaleAction">
+            <forward name="list" path="newsList"/>
+            <forward name="view" path="viewNews"/>
+            <forward name="add" path="addNews"/>
+        </action>
+    </action-mappings>
+
+    <controller>
+        <set-property property="processorClass" value="org.springframework.web.struts.AutowiringTilesRequestProcessor"/>
+    </controller>
+
+    <message-resources parameter="MessageResources"/>
+
+    <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+        <set-property property="contextConfigLocation" value="/WEB-INF/applicationContext.xml"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+
+
+</struts-config>
+

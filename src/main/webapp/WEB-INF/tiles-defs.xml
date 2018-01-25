@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<tiles-definitions>
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+<!-- perekinut all in Web-Inf/jsp -->
+    <definition name="baseLayout" path="/WEB-INF/jsp/baseLayout.jsp">
+        <put name="title"  value="Tiles Example" />
+        <put name="header" value="/WEB-INF/jsp/component/headerList.jsp" />
+        <put name="menu"   value="/WEB-INF/jsp/component/menu.jsp" />
+        <put name="body"   value="/WEB-INF/jsp/component/body.jsp" />
+        <put name="footer" value="/WEB-INF/jsp/component/footer.jsp" />
+    </definition>
+    <definition name="newsList" extends="baseLayout">
+        <put name="title" value="News List" />
+        <put name="header" value="/WEB-INF/jsp/component/headerList.jsp"/>
+        <put name="body" value="/WEB-INF/jsp/NewsList.jsp" />
+    </definition>
+    <definition name="addNews" extends="baseLayout">
+        <put name="title" value="Add News" />
+        <put name="header" value="/WEB-INF/jsp/component/headerAdd.jsp"/>
+        <put name="body" value="/WEB-INF/jsp/NewsCreateModify.jsp" />
+    </definition>
+    <definition name="viewNews" extends="baseLayout">
+        <put name="title" value="News View" />
+        <put name="header" value="/WEB-INF/jsp/component/headerView.jsp"/>
+        <put name="body" value="/WEB-INF/jsp/NewsView.jsp" />
+    </definition>
+</tiles-definitions>
