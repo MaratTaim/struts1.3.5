@@ -4,6 +4,7 @@ package com.epam.testapp.datebase.pool;
  * Marat Taim 15.07.2017
  */
 import com.epam.testapp.util.Const;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
@@ -17,7 +18,7 @@ import java.util.concurrent.BlockingQueue;
 
 @Component
 public class ConnectionPool {
-    private static ConnectionPool instance;
+    private final Logger logger = Logger.getLogger(ConnectionPool.class);
     private final ResourceBundle resource = ResourceBundle.getBundle("connection");
     private int maxConn = Integer.parseInt(resource.getString("max.conn"));
     private BlockingQueue<Connection> freeConnections = new ArrayBlockingQueue<Connection>(maxConn);
@@ -55,7 +56,7 @@ public class ConnectionPool {
             con = DriverManager.getConnection(URL, C_USER, C_PASSWORD);
 
         } catch (SQLException | ClassNotFoundException e) {
-            System.out.println(Const.C_CREATE_CONN);
+            logger.error(Const.C_CREATE_CONN, e);
             e.printStackTrace();
         }
         return con;
@@ -74,7 +75,7 @@ public class ConnectionPool {
             try {
                 con.close();
             } catch (SQLException e) {
-                System.out.println(Const.C_CLOSE_CONN);
+                logger.error(Const.C_CLOSE_CONN, e);
             }
         }
         freeConnections.clear();

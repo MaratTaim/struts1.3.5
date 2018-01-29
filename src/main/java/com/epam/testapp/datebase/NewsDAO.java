@@ -2,6 +2,7 @@ package com.epam.testapp.datebase;
 
 import com.epam.testapp.model.News;
 import com.epam.testapp.util.Const;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
@@ -13,6 +14,7 @@ import java.util.List;
  */
 @Component
 public class NewsDAO implements AbstractDAO {
+    private final Logger logger = Logger.getLogger(NewsDAO.class);
     private Connection connection;
     private final String INSERT = "INSERT INTO NEWS (TITLE, N_DATE, BRIEF, CONTENT) VALUES(?,?,?,?)";
     private final String UPDATE = "UPDATE NEWS SET TITLE=?, N_DATE=?, BRIEF=?, CONTENT=? WHERE ID=?";
@@ -44,7 +46,7 @@ public class NewsDAO implements AbstractDAO {
             }
             commit(connection);
         } catch (SQLException e) {
-            System.out.println(Const.ERR_LIST);
+            logger.error(Const.ERR_LIST,e);
         }
         return list;
     }
@@ -60,7 +62,7 @@ public class NewsDAO implements AbstractDAO {
 
             commit(connection);
         } catch (SQLException e) {
-            System.out.println(Const.C_SAVE);
+            logger.error(Const.C_SAVE, e);
             return false;
         }
         return true;
@@ -75,12 +77,12 @@ public class NewsDAO implements AbstractDAO {
             st.setString(4, news.getContent());
             st.setInt(5, news.getId());
             if (st.executeUpdate() == 0) {
-                System.out.println(Const.C_UPDATE + news.getId());
+                logger.error(Const.C_UPDATE + news.getId());
                 return false;
             }
             commit(connection);
         } catch (SQLException e) {
-            System.out.println(Const.ERR_UPDATE);
+            logger.error(Const.ERR_UPDATE, e);
         }
         return true;
     }
@@ -90,12 +92,12 @@ public class NewsDAO implements AbstractDAO {
         try (PreparedStatement ps = connection.prepareStatement(DELETE)) {
             ps.setInt(1, id);
             if (ps.executeUpdate() == 0) {
-                System.out.println(Const.C_DELETE);
+                logger.error(Const.C_DELETE);
                 return false;
             }
             commit(connection);
         } catch (SQLException e) {
-            System.out.println(Const.ERR_DELETE);
+            logger.error(Const.ERR_DELETE, e);
         }
         return true;
     }
@@ -107,7 +109,7 @@ public class NewsDAO implements AbstractDAO {
             st.setInt(1, id);
             ResultSet rs = st.executeQuery();
             if (!rs.next()) {
-                System.out.println(Const.C_SELECT);
+                logger.error(Const.C_SELECT);
             }
             news = new News(rs.getInt(ID),
                     rs.getString(TITLE),
@@ -117,7 +119,7 @@ public class NewsDAO implements AbstractDAO {
 
             commit(connection);
         } catch (SQLException e) {
-            System.out.println(Const.ERR_SELECT);
+            logger.error(Const.ERR_SELECT, e);
         }
         return news;
     }
@@ -126,11 +128,11 @@ public class NewsDAO implements AbstractDAO {
         try {
             connection.commit();
         } catch (Exception e) {
-            System.out.println(Const.COMMIT_EX);
+            logger.error(Const.COMMIT_EX, e);
             try {
                 connection.rollback();
             } catch (SQLException e1) {
-                System.out.println(Const.ROLLBACK_EX);
+                logger.error(Const.ROLLBACK_EX, e1);
             }
         }
     }

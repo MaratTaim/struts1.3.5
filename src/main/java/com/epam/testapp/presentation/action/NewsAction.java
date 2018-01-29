@@ -4,6 +4,7 @@ import com.epam.testapp.datebase.AbstractDAO;
 import com.epam.testapp.datebase.pool.ConnectionPool;
 import com.epam.testapp.presentation.form.NewsForm;
 import com.epam.testapp.util.Const;
+import org.apache.log4j.Logger;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -19,6 +20,7 @@ import java.util.Map;
 
 @Component
 public class NewsAction extends LookupDispatchAction {
+    private final Logger logger = Logger.getLogger(NewsAction.class);
 
     @Autowired
     private ConnectionPool pool;
@@ -48,7 +50,7 @@ public class NewsAction extends LookupDispatchAction {
 
             newsForm.setNewsList(newsDAO.getList());
         } catch (Exception e){
-            System.out.println(Const.EX_LIST);
+            logger.error(Const.EX_LIST, e);
             return mapping.findForward(Const.LIST);
         }
 
@@ -66,7 +68,7 @@ public class NewsAction extends LookupDispatchAction {
             request.setAttribute(Const.NEWS, newsDAO.fetchById(id));
             newsForm.setNewsMessage(newsDAO.fetchById(id));
         } catch (Exception e){
-            System.out.println(Const.EX_VIEW);
+            logger.info(Const.EX_VIEW, e);
             return mapping.findForward(Const.LIST);
         }
 
@@ -84,7 +86,7 @@ public class NewsAction extends LookupDispatchAction {
 
             newsForm.setNewsMessage(newsDAO.fetchById(id));
         } catch (Exception e){
-            System.out.println(Const.EX_EDIT + id);
+            logger.info(Const.EX_EDIT + id, e);
             return mapping.findForward(Const.CR_MODIFY);
         }
 
@@ -113,7 +115,7 @@ public class NewsAction extends LookupDispatchAction {
 
             newsForm.setNewsList(newsDAO.getList());
         } catch (Exception e){
-            System.out.println(Const.EX_DELETE + id);
+            logger.info(Const.EX_DELETE + id, e);
             return mapping.findForward(Const.LIST);
         }
 
@@ -138,7 +140,7 @@ public class NewsAction extends LookupDispatchAction {
                 newsDAO.update(newsForm.getNewsMessage());
             }
         }catch (Exception e){
-            System.out.println(Const.EX_SAVE);
+            logger.info(Const.EX_SAVE, e);
             return mapping.findForward(Const.CR_MODIFY);
         }
         request.setAttribute(Const.NEWS, newsForm.getNewsMessage());
