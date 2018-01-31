@@ -2,6 +2,7 @@ package com.epam.testapp.datebase;
 
 import com.epam.testapp.model.News;
 import com.epam.testapp.util.Const;
+import com.epam.testapp.util.ParseDate;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
@@ -40,8 +41,8 @@ public class NewsDAO implements AbstractDAO {
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
                 news = new News(rs.getInt(ID), rs.getString(TITLE),
-                        rs.getDate(DATE).toString(), rs.getString(BRIEF),
-                        rs.getString(CONTENT));
+                        ParseDate.parse(rs.getDate(DATE).toString(), Const.FROM_SQL),
+                        rs.getString(BRIEF), rs.getString(CONTENT));
                 list.add(news);
             }
             commit(connection);
@@ -55,7 +56,7 @@ public class NewsDAO implements AbstractDAO {
     public boolean save(News news) {
         try (PreparedStatement st = connection.prepareStatement(INSERT)) {
             st.setString(1, news.getTitle());
-            st.setDate(2, Date.valueOf(news.getDate()));
+            st.setDate(2, Date.valueOf(ParseDate.parse(news.getDate(), Const.TO_SQL)));
             st.setString(3, news.getBrief());
             st.setString(4, news.getContent());
             st.execute();
@@ -72,7 +73,7 @@ public class NewsDAO implements AbstractDAO {
     public boolean update(News news) {
         try (PreparedStatement st = connection.prepareStatement(UPDATE)) {
             st.setString(1, news.getTitle());
-            st.setDate(2, Date.valueOf(news.getDate()));
+            st.setDate(2, Date.valueOf(ParseDate.parse(news.getDate(), Const.TO_SQL)));
             st.setString(3, news.getBrief());
             st.setString(4, news.getContent());
             st.setInt(5, news.getId());
@@ -113,7 +114,7 @@ public class NewsDAO implements AbstractDAO {
             }
             news = new News(rs.getInt(ID),
                     rs.getString(TITLE),
-                    rs.getDate(DATE).toString(),
+                    ParseDate.parse(rs.getDate(DATE).toString(), Const.FROM_SQL),
                     rs.getString(BRIEF),
                     rs.getString(CONTENT));
 
@@ -136,4 +137,5 @@ public class NewsDAO implements AbstractDAO {
             }
         }
     }
+
 }

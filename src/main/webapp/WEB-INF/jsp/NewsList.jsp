@@ -3,6 +3,8 @@
 <%@ taglib prefix="nested" uri="http://jakarta.apache.org/struts/tags-nested" %>
 <%@ taglib prefix="bean" uri="http://jakarta.apache.org/struts/tags-bean" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <html:html>
 <head>
     <link href="<c:url value='../../css/main.css'/>" rel="stylesheet" type="text/css"/>
@@ -28,6 +30,7 @@
 
     <tr>
         <html:errors/>
+
         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
         <td style="width: 157px; text-align: right"><bean:write name="list" property="date"/></td>
     </tr>

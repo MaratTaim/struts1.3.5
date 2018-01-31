@@ -2,6 +2,7 @@ package com.epam.testapp.presentation.form;
 
 import com.epam.testapp.model.News;
 import com.epam.testapp.util.Const;
+import com.epam.testapp.util.ParseDate;
 import org.apache.struts.action.*;
 import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
@@ -85,7 +86,7 @@ public class NewsForm extends ActionForm {
 
     private boolean checkDate(String date){
         try{
-            Date currentDate = Date.valueOf(date);
+            Date currentDate = Date.valueOf(ParseDate.parse(date, Const.TO_SQL));
             SimpleDateFormat dateFormat = new SimpleDateFormat(Const.DATE_PATTERN);
             dateFormat.format(currentDate);
             return false;

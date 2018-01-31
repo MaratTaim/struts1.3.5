@@ -1,1 +1,732 @@
-2018-01-29 12:29:51 INFO  TestLog:10 - hello from TestLog class
+2018-01-29 14:14:15 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': /WEB-INF/jsp/NewsList.jsp (line: 41, column: 52) According to the TLD or the tag file, attribute name is mandatory for tag write
+org.apache.jasper.JasperException: /WEB-INF/jsp/NewsList.jsp (line: 41, column: 52) According to the TLD or the tag file, attribute name is mandatory for tag write
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41)
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:275)
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:107)
+	at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:862)
+	at org.apache.jasper.compiler.Node$CustomTag.accept(Node.java:1536)
+	at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2376)
+	at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2428)
+	at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:898)
+	at org.apache.jasper.compiler.Node$CustomTag.accept(Node.java:1536)
+	at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2376)
+	at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2428)
+	at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:898)
+	at org.apache.jasper.compiler.Node$CustomTag.accept(Node.java:1536)
+	at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2376)
+	at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2428)
+	at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:898)
+	at org.apache.jasper.compiler.Node$CustomTag.accept(Node.java:1536)
+	at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2376)
+	at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2428)
+	at org.apache.jasper.compiler.Node$Visitor.visit(Node.java:2434)
+	at org.apache.jasper.compiler.Node$Root.accept(Node.java:464)
+	at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2376)
+	at org.apache.jasper.compiler.Validator.validateExDirectives(Validator.java:1853)
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:217)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:336)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:323)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:585)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:363)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-01-29 14:14:47 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': javax.servlet.jsp.JspException: Cannot find bean: "d" in any scope
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/jsp/NewsList.jsp at line 41
+
+38:         <p>Parsed Date: <c:out value = "${parsedEmpDate}" /></p>
+39: 
+40:         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
+41:         <td style="width: 157px; text-align: right"><bean:write name="d" property="${parsedEmpDate}" format="dd/MM/yyyy"/></td>
+42:     </tr>
+43:     <tr>
+44:         <td style="width: 519px;">
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:574)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:461)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspException: Cannot find bean: "d" in any scope
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:909)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:838)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:367)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	... 65 more
+Caused by: javax.servlet.jsp.JspException: Cannot find bean: "d" in any scope
+	at org.apache.struts.taglib.TagUtils.lookup(TagUtils.java:935)
+	at org.apache.struts.taglib.bean.WriteTag.doStartTag(WriteTag.java:225)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspx_meth_bean_005fwrite_005f1(NewsList_jsp.java:528)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:265)
+	... 68 more
+2018-01-29 14:15:22 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': javax.servlet.jsp.JspException: Cannot find bean: "Mon Jan 22 00:00:00 ALMT 2018" in any scope
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/jsp/NewsList.jsp at line 41
+
+38:         <p>Parsed Date: <c:out value = "${parsedEmpDate}" /></p>
+39: 
+40:         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
+41:         <td style="width: 157px; text-align: right"><bean:write name="${parsedEmpDate}" property="${parsedEmpDate}" format="dd/MM/yyyy"/></td>
+42:     </tr>
+43:     <tr>
+44:         <td style="width: 519px;">
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:574)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:461)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspException: Cannot find bean: "Mon Jan 22 00:00:00 ALMT 2018" in any scope
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:909)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:838)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:367)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	... 65 more
+Caused by: javax.servlet.jsp.JspException: Cannot find bean: "Mon Jan 22 00:00:00 ALMT 2018" in any scope
+	at org.apache.struts.taglib.TagUtils.lookup(TagUtils.java:935)
+	at org.apache.struts.taglib.bean.WriteTag.doStartTag(WriteTag.java:225)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspx_meth_bean_005fwrite_005f1(NewsList_jsp.java:528)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:265)
+	... 68 more
+2018-01-29 14:15:28 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': javax.servlet.jsp.JspException: Cannot find bean: "Mon Jan 22 00:00:00 ALMT 2018" in any scope
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/jsp/NewsList.jsp at line 41
+
+38:         <p>Parsed Date: <c:out value = "${parsedEmpDate}" /></p>
+39: 
+40:         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
+41:         <td style="width: 157px; text-align: right"><bean:write name="${parsedEmpDate}" format="dd/MM/yyyy"/></td>
+42:     </tr>
+43:     <tr>
+44:         <td style="width: 519px;">
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:574)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:461)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspException: Cannot find bean: "Mon Jan 22 00:00:00 ALMT 2018" in any scope
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:909)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:838)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:367)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	... 65 more
+Caused by: javax.servlet.jsp.JspException: Cannot find bean: "Mon Jan 22 00:00:00 ALMT 2018" in any scope
+	at org.apache.struts.taglib.TagUtils.lookup(TagUtils.java:935)
+	at org.apache.struts.taglib.bean.WriteTag.doStartTag(WriteTag.java:225)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspx_meth_bean_005fwrite_005f1(NewsList_jsp.java:526)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:265)
+	... 68 more
+2018-01-29 14:19:55 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': javax.servlet.jsp.JspException: No getter method for property: "Mon Jan 22 00:00:00 ALMT 2018" of bean: "com.epam.testapp.presentation.form.NewsForm"
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/jsp/NewsList.jsp at line 39
+
+36:         <c:set var = "now" value = "${list.date}" />
+37:         <fmt:parseDate value = "${now}" var = "parsedEmpDate" pattern = "yyyy-MM-dd" />
+38:         <p>Parsed Date: <c:out value = "${parsedEmpDate}" /></p>
+39:         <html:text property="${parsedEmpDate}" />
+40:         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
+41:         <td style="width: 157px; text-align: right"><bean:write name="list" property="date"/></td>
+42:     </tr>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:574)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:461)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspException: No getter method for property: "Mon Jan 22 00:00:00 ALMT 2018" of bean: "com.epam.testapp.presentation.form.NewsForm"
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:909)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:838)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:370)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	... 65 more
+Caused by: javax.servlet.jsp.JspException: No getter method for property: "Mon Jan 22 00:00:00 ALMT 2018" of bean: "com.epam.testapp.presentation.form.NewsForm"
+	at org.apache.struts.taglib.TagUtils.lookup(TagUtils.java:987)
+	at org.apache.struts.taglib.html.BaseFieldTag.prepareValue(BaseFieldTag.java:121)
+	at org.apache.struts.taglib.html.BaseFieldTag.renderInputElement(BaseFieldTag.java:102)
+	at org.apache.struts.taglib.html.BaseFieldTag.doStartTag(BaseFieldTag.java:81)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspx_meth_html_005ftext_005f0(NewsList_jsp.java:506)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:260)
+	... 68 more
+2018-01-29 14:19:56 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': javax.servlet.jsp.JspException: No getter method for property: "Mon Jan 22 00:00:00 ALMT 2018" of bean: "com.epam.testapp.presentation.form.NewsForm"
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/jsp/NewsList.jsp at line 39
+
+36:         <c:set var = "now" value = "${list.date}" />
+37:         <fmt:parseDate value = "${now}" var = "parsedEmpDate" pattern = "yyyy-MM-dd" />
+38:         <p>Parsed Date: <c:out value = "${parsedEmpDate}" /></p>
+39:         <html:text property="${parsedEmpDate}" />
+40:         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
+41:         <td style="width: 157px; text-align: right"><bean:write name="list" property="date"/></td>
+42:     </tr>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:574)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:461)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspException: No getter method for property: "Mon Jan 22 00:00:00 ALMT 2018" of bean: "com.epam.testapp.presentation.form.NewsForm"
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:909)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:838)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:370)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	... 65 more
+Caused by: javax.servlet.jsp.JspException: No getter method for property: "Mon Jan 22 00:00:00 ALMT 2018" of bean: "com.epam.testapp.presentation.form.NewsForm"
+	at org.apache.struts.taglib.TagUtils.lookup(TagUtils.java:987)
+	at org.apache.struts.taglib.html.BaseFieldTag.prepareValue(BaseFieldTag.java:121)
+	at org.apache.struts.taglib.html.BaseFieldTag.renderInputElement(BaseFieldTag.java:102)
+	at org.apache.struts.taglib.html.BaseFieldTag.doStartTag(BaseFieldTag.java:81)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspx_meth_html_005ftext_005f0(NewsList_jsp.java:506)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:260)
+	... 68 more
+2018-01-29 14:20:53 ERROR InsertTag:922 - ServletException in '/WEB-INF/jsp/NewsList.jsp': javax.servlet.jsp.JspException: No getter method for property: "" of bean: "com.epam.testapp.presentation.form.NewsForm"
+org.apache.jasper.JasperException: An exception occurred processing JSP page /WEB-INF/jsp/NewsList.jsp at line 39
+
+36:         <c:set var = "now" value = "${list.date}" />
+37:         <fmt:parseDate value = "${now}" var = "parsedEmpDate" pattern = "yyyy-MM-dd" />
+38:         <p>Parsed Date: <c:out value = "${parsedEmpDate}" /></p>
+39:         <html:text  property="${param.parsedEmpDate}" />
+40:         <th style="width: 496px; text-align: left"><bean:write name="list" property="title"/></th>
+41:         <td style="width: 157px; text-align: right"><bean:write name="list" property="date"/></td>
+42:     </tr>
+
+
+Stacktrace:
+	at org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:574)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:461)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:583)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:522)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:934)
+	at org.apache.jasper.runtime.PageContextImpl.include(PageContextImpl.java:647)
+	at org.apache.struts.tiles.TilesUtilImpl.doInclude(TilesUtilImpl.java:99)
+	at org.apache.struts.tiles.TilesUtil.doInclude(TilesUtil.java:135)
+	at org.apache.struts.taglib.tiles.InsertTag.doInclude(InsertTag.java:760)
+	at org.apache.struts.taglib.tiles.InsertTag$InsertHandler.doEndTag(InsertTag.java:892)
+	at org.apache.struts.taglib.tiles.InsertTag.doEndTag(InsertTag.java:462)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspx_meth_tiles_005finsert_005f2(baseLayout_jsp.java:266)
+	at org.apache.jsp.WEB_002dINF.jsp.baseLayout_jsp._jspService(baseLayout_jsp.java:159)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:465)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1085)
+	at org.apache.struts.tiles.TilesRequestProcessor.doForward(TilesRequestProcessor.java:263)
+	at org.apache.struts.tiles.TilesRequestProcessor.processTilesDefinition(TilesRequestProcessor.java:239)
+	at org.apache.struts.tiles.TilesRequestProcessor.processForwardConfig(TilesRequestProcessor.java:302)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:241)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at com.epam.testapp.util.filter.EncodingFilter.doFilter(EncodingFilter.java:23)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: javax.servlet.jsp.JspException: No getter method for property: "" of bean: "com.epam.testapp.presentation.form.NewsForm"
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:909)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:838)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:370)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+	... 65 more
+Caused by: javax.servlet.jsp.JspException: No getter method for property: "" of bean: "com.epam.testapp.presentation.form.NewsForm"
+	at org.apache.struts.taglib.TagUtils.lookup(TagUtils.java:987)
+	at org.apache.struts.taglib.html.BaseFieldTag.prepareValue(BaseFieldTag.java:121)
+	at org.apache.struts.taglib.html.BaseFieldTag.renderInputElement(BaseFieldTag.java:102)
+	at org.apache.struts.taglib.html.BaseFieldTag.doStartTag(BaseFieldTag.java:81)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspx_meth_html_005ftext_005f0(NewsList_jsp.java:506)
+	at org.apache.jsp.WEB_002dINF.jsp.NewsList_jsp._jspService(NewsList_jsp.java:260)
+	... 68 more
+2018-01-29 16:12:29 INFO  XmlWebApplicationContext:1042 - Closing WebApplicationContext for namespace 'action-servlet': startup date [Mon Jan 29 14:03:13 ALMT 2018]; root of context hierarchy
+2018-01-29 16:12:29 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7bb36ae3: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-29 16:12:42 INFO  ContextLoaderPlugIn:219 - ContextLoaderPlugIn for Struts ActionServlet 'action, module '': initialization started
+2018-01-29 16:12:42 INFO  XmlWebApplicationContext:510 - Refreshing WebApplicationContext for namespace 'action-servlet': startup date [Mon Jan 29 16:12:42 ALMT 2018]; root of context hierarchy
+2018-01-29 16:12:42 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2018-01-29 16:12:42 INFO  ClassPathBeanDefinitionScanner:231 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2018-01-29 16:12:43 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d13dfc9: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-29 16:12:43 INFO  ContextLoaderPlugIn:298 - Using context class 'org.springframework.web.context.support.XmlWebApplicationContext' for servlet 'action'
+2018-01-29 16:12:43 INFO  ContextLoaderPlugIn:236 - ContextLoaderPlugIn for Struts ActionServlet 'action', module '': initialization completed in 1061 ms
+2018-01-29 16:12:43 INFO  TilesPlugin:236 - Tiles definition factory loaded for module ''.
+2018-01-29 16:12:44 INFO  TilesRequestProcessor:103 - Tiles definition factory found for request processor ''.
+2018-01-29 16:14:01 INFO  XmlWebApplicationContext:1042 - Closing WebApplicationContext for namespace 'action-servlet': startup date [Mon Jan 29 16:12:42 ALMT 2018]; root of context hierarchy
+2018-01-29 16:14:01 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7d13dfc9: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 09:52:37 INFO  ContextLoaderPlugIn:219 - ContextLoaderPlugIn for Struts ActionServlet 'action, module '': initialization started
+2018-01-31 09:52:37 INFO  XmlWebApplicationContext:510 - Refreshing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 09:52:37 ALMT 2018]; root of context hierarchy
+2018-01-31 09:52:37 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2018-01-31 09:52:38 INFO  ClassPathBeanDefinitionScanner:231 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2018-01-31 09:52:38 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@329da4ae: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 09:52:39 INFO  ContextLoaderPlugIn:298 - Using context class 'org.springframework.web.context.support.XmlWebApplicationContext' for servlet 'action'
+2018-01-31 09:52:39 INFO  ContextLoaderPlugIn:236 - ContextLoaderPlugIn for Struts ActionServlet 'action', module '': initialization completed in 1826 ms
+2018-01-31 09:52:39 INFO  TilesPlugin:236 - Tiles definition factory loaded for module ''.
+2018-01-31 09:52:41 INFO  TilesRequestProcessor:103 - Tiles definition factory found for request processor ''.
+2018-01-31 10:07:48 INFO  XmlWebApplicationContext:1042 - Closing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 09:52:37 ALMT 2018]; root of context hierarchy
+2018-01-31 10:07:48 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@329da4ae: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:07:52 INFO  ContextLoaderPlugIn:219 - ContextLoaderPlugIn for Struts ActionServlet 'action, module '': initialization started
+2018-01-31 10:07:52 INFO  XmlWebApplicationContext:510 - Refreshing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:07:52 ALMT 2018]; root of context hierarchy
+2018-01-31 10:07:52 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2018-01-31 10:07:52 INFO  ClassPathBeanDefinitionScanner:231 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2018-01-31 10:07:52 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@18590b78: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:07:53 INFO  ContextLoaderPlugIn:298 - Using context class 'org.springframework.web.context.support.XmlWebApplicationContext' for servlet 'action'
+2018-01-31 10:07:53 INFO  ContextLoaderPlugIn:236 - ContextLoaderPlugIn for Struts ActionServlet 'action', module '': initialization completed in 755 ms
+2018-01-31 10:07:53 INFO  TilesPlugin:236 - Tiles definition factory loaded for module ''.
+2018-01-31 10:08:04 INFO  TilesRequestProcessor:103 - Tiles definition factory found for request processor ''.
+2018-01-31 10:12:56 INFO  XmlWebApplicationContext:1042 - Closing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:07:52 ALMT 2018]; root of context hierarchy
+2018-01-31 10:12:56 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@18590b78: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:12:59 INFO  ContextLoaderPlugIn:219 - ContextLoaderPlugIn for Struts ActionServlet 'action, module '': initialization started
+2018-01-31 10:12:59 INFO  XmlWebApplicationContext:510 - Refreshing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:12:59 ALMT 2018]; root of context hierarchy
+2018-01-31 10:12:59 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2018-01-31 10:12:59 INFO  ClassPathBeanDefinitionScanner:231 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2018-01-31 10:13:00 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6611341b: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:13:00 INFO  ContextLoaderPlugIn:298 - Using context class 'org.springframework.web.context.support.XmlWebApplicationContext' for servlet 'action'
+2018-01-31 10:13:00 INFO  ContextLoaderPlugIn:236 - ContextLoaderPlugIn for Struts ActionServlet 'action', module '': initialization completed in 606 ms
+2018-01-31 10:13:00 INFO  TilesPlugin:236 - Tiles definition factory loaded for module ''.
+2018-01-31 10:13:06 INFO  TilesRequestProcessor:103 - Tiles definition factory found for request processor ''.
+2018-01-31 10:14:57 INFO  XmlWebApplicationContext:1042 - Closing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:12:59 ALMT 2018]; root of context hierarchy
+2018-01-31 10:14:57 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6611341b: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:14:59 INFO  ContextLoaderPlugIn:219 - ContextLoaderPlugIn for Struts ActionServlet 'action, module '': initialization started
+2018-01-31 10:15:00 INFO  XmlWebApplicationContext:510 - Refreshing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:15:00 ALMT 2018]; root of context hierarchy
+2018-01-31 10:15:00 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2018-01-31 10:15:00 INFO  ClassPathBeanDefinitionScanner:231 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2018-01-31 10:15:00 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@26737303: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:15:00 INFO  ContextLoaderPlugIn:298 - Using context class 'org.springframework.web.context.support.XmlWebApplicationContext' for servlet 'action'
+2018-01-31 10:15:00 INFO  ContextLoaderPlugIn:236 - ContextLoaderPlugIn for Struts ActionServlet 'action', module '': initialization completed in 627 ms
+2018-01-31 10:15:00 INFO  TilesPlugin:236 - Tiles definition factory loaded for module ''.
+2018-01-31 10:15:06 INFO  TilesRequestProcessor:103 - Tiles definition factory found for request processor ''.
+2018-01-31 10:25:48 INFO  XmlWebApplicationContext:1042 - Closing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:15:00 ALMT 2018]; root of context hierarchy
+2018-01-31 10:25:48 INFO  DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@26737303: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:25:50 INFO  ContextLoaderPlugIn:219 - ContextLoaderPlugIn for Struts ActionServlet 'action, module '': initialization started
+2018-01-31 10:25:51 INFO  XmlWebApplicationContext:510 - Refreshing WebApplicationContext for namespace 'action-servlet': startup date [Wed Jan 31 10:25:51 ALMT 2018]; root of context hierarchy
+2018-01-31 10:25:51 INFO  XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2018-01-31 10:25:51 INFO  ClassPathBeanDefinitionScanner:231 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2018-01-31 10:25:51 INFO  DefaultListableBeanFactory:596 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1d83e869: defining beans [newsDAO,connectionPool,news,localeAction,newsAction,newsForm,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2018-01-31 10:25:51 INFO  ContextLoaderPlugIn:298 - Using context class 'org.springframework.web.context.support.XmlWebApplicationContext' for servlet 'action'
+2018-01-31 10:25:51 INFO  ContextLoaderPlugIn:236 - ContextLoaderPlugIn for Struts ActionServlet 'action', module '': initialization completed in 524 ms
+2018-01-31 10:25:51 INFO  TilesPlugin:236 - Tiles definition factory loaded for module ''.
+2018-01-31 10:25:59 INFO  TilesRequestProcessor:103 - Tiles definition factory found for request processor ''.

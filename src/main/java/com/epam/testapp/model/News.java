@@ -1,5 +1,6 @@
 package com.epam.testapp.model;
 
+import com.epam.testapp.util.Const;
 import org.springframework.stereotype.Component;
 
 import java.sql.Date;
@@ -11,7 +12,7 @@ public class News {
 	public static final News EMPTY = new News();
 	private int id;
 	private String title = "";
-	private String date  = new Date(new java.util.Date().getTime()).toString();
+	private String date  = Const.KURR_DATE;
 	private String brief = "";
 	private String content = "";
 	private boolean delete;

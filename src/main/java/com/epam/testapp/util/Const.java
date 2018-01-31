@@ -1,6 +1,8 @@
 package com.epam.testapp.util;
 
 
+import java.sql.Date;
+
 public class Const{
 
 //    ConnectionPool
@@ -64,5 +66,11 @@ public class Const{
     public static final String KEY_DATE_FORMAT = "error.date.format";
     public static final String DATE_PATTERN = "yyyy MM dd";
 
+//    ParseDate
+    public static final int TO_SQL = 2;
+    public static final int FROM_SQL = 1;
+
+//    Current Date
+    public static final  String KURR_DATE = ParseDate.parse(new Date(new java.util.Date().getTime()).toString(),Const.FROM_SQL);
 
 }
