@@ -1,88 +1,99 @@
 package com.epam.testapp.model;
 
 import com.epam.testapp.util.Const;
-import org.springframework.stereotype.Component;
+import javax.persistence.*;
+import java.io.Serializable;
 
-import java.sql.Date;
+@Entity
+@Table(name = "NEWS")
+public class News implements Serializable{
 
-@Component
-public class News {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-//	parameters must be not null
-	public static final News EMPTY = new News();
-	private int id;
-	private String title = "";
-	private String date  = Const.KURR_DATE;
-	private String brief = "";
-	private String content = "";
-	private boolean delete;
+    @Column(name = "TITLE", nullable = false, length = 100)
+    private String title;
 
-	public News() {}
+    @Column(name = "N_DATE", nullable = false, length = 10)
+    private String date = Const.KURR_DATE;
 
-	public News(int id, String title, String date, String brief, String content) {
-		this.id = id;
-		this.title = title;
-		this.date = date;
-		this.brief = brief;
-		this.content = content;
-	}
+    @Column(name = "BRIEF", nullable = false, length = 512)
+    private String brief;
 
-	public int getId() {
-		return id;
-	}
+    @Column(name = "CONTENT", nullable = false, length = 1024)
+    private String content;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    @Column(name = "DEL")
+    private boolean delete;
 
-	public String getTitle() {
-		return title;
-	}
+    public News() {
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public News(Long id, String title, String date, String brief, String content) {
+        this.id = id;
+        this.title = title;
+        this.date = date;
+        this.brief = brief;
+        this.content = content;
+    }
 
-	public String getDate() {
-		return date;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getBrief() {
-		return brief;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setBrief(String brief) {
-		this.brief = brief;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public String getContent() {
-		return content;
-	}
+    public String getDate() {
+        return date;
+    }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
+    public void setDate(String date) {
+        this.date = date;
+    }
 
-	public boolean isDelete() {
-		return delete;
-	}
+    public String getBrief() {
+        return brief;
+    }
 
-	public void setDelete(boolean delete) {
-		this.delete = delete;
-	}
+    public void setBrief(String brief) {
+        this.brief = brief;
+    }
 
-	@Override
-	public String toString() {
-		return "News{" +
-				"id=" + id +
-				", title='" + title + '\'' +
-				", date=" + date +
-				", brief='" + brief + '\'' +
-				", content='" + content + '\'' +
-				'}';
-	}
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public boolean isDelete() {
+        return delete;
+    }
+
+    public void setDelete(boolean delete) {
+        this.delete = delete;
+    }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", date=" + date +
+                ", brief='" + brief + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }

@@ -37,7 +37,7 @@ public class NewsForm extends ActionForm {
     @Override
     public void reset(ActionMapping mapping, HttpServletRequest request) {
         newsMessage = new News();
-        newsList = new ArrayList<>();
+        newsList = new ArrayList<News>();
     }
 
     @Override

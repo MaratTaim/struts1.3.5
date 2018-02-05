@@ -9,14 +9,14 @@ import java.util.List;
 /**
  * Created by User on 20.01.2018.
  */
+
 public interface AbstractDAO {
 
-    void setConnection(Connection connection);
     List<News> getList();
-    boolean save(News news);
-    boolean remove(int id);
-    News fetchById(int id);
-    boolean update(News news);
+    void save(News news);
+    void remove(Long id);
+    News fetchById(Long id);
+    void update(News news);
 
 
 }

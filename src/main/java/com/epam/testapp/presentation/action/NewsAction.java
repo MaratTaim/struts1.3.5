@@ -1,7 +1,6 @@
 package com.epam.testapp.presentation.action;
 
 import com.epam.testapp.datebase.AbstractDAO;
-import com.epam.testapp.datebase.pool.ConnectionPool;
 import com.epam.testapp.presentation.form.NewsForm;
 import com.epam.testapp.util.Const;
 import org.apache.log4j.Logger;
@@ -13,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,13 +21,11 @@ public class NewsAction extends LookupDispatchAction {
     private final Logger logger = Logger.getLogger(NewsAction.class);
 
     @Autowired
-    private ConnectionPool pool;
-    @Autowired
     private AbstractDAO newsDAO;
 
     @Override
     protected Map getKeyMethodMap() {
-        Map map = new HashMap<>();
+        Map map = new HashMap<String, String>();
         map.put(Const.LB_LIST, Const.LIST);
         map.put(Const.LB_VIEW, Const.VIEW);
         map.put(Const.LB_EDIT, Const.EDIT);
@@ -43,12 +39,10 @@ public class NewsAction extends LookupDispatchAction {
 
     public ActionForward list(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         try{
-            Connection connection = pool.getConnection();
-            connection.setAutoCommit(false);
-            NewsForm newsForm = (NewsForm) form;
-            newsDAO.setConnection(connection);
 
+            NewsForm newsForm = (NewsForm) form;
             newsForm.setNewsList(newsDAO.getList());
+
         } catch (Exception e){
             logger.error(Const.EX_LIST, e);
             return mapping.findForward(Const.LIST);
@@ -59,14 +53,13 @@ public class NewsAction extends LookupDispatchAction {
 
     public ActionForward view(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         try{
-            Connection connection = pool.getConnection();
-            connection.setAutoCommit(false);
-            NewsForm newsForm = (NewsForm) form;
-            newsDAO.setConnection(connection);
 
-            int id = Integer.parseInt(request.getParameter(Const.ID));
+            NewsForm newsForm = (NewsForm) form;
+            Long id = Long.parseLong(request.getParameter(Const.ID));
+
             request.setAttribute(Const.NEWS, newsDAO.fetchById(id));
             newsForm.setNewsMessage(newsDAO.fetchById(id));
+
         } catch (Exception e){
             logger.info(Const.EX_VIEW, e);
             return mapping.findForward(Const.LIST);
@@ -76,15 +69,13 @@ public class NewsAction extends LookupDispatchAction {
     }
 
     public ActionForward edit(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        int id = 0;
+        Long id = 0L;
         try{
-            Connection connection = pool.getConnection();
-            connection.setAutoCommit(false);
-            NewsForm newsForm = (NewsForm) form;
-            newsDAO.setConnection(connection);
-            id = Integer.parseInt(request.getParameter(Const.ID));
 
+            NewsForm newsForm = (NewsForm) form;
+            id = Long.parseLong(request.getParameter(Const.ID));
             newsForm.setNewsMessage(newsDAO.fetchById(id));
+
         } catch (Exception e){
             logger.info(Const.EX_EDIT + id, e);
             return mapping.findForward(Const.CR_MODIFY);
@@ -94,26 +85,25 @@ public class NewsAction extends LookupDispatchAction {
     }
 
     public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        int id = 0;
+        Long id = 0L;
         try{
-            Connection connection = pool.getConnection();
-            connection.setAutoCommit(false);
+
             NewsForm newsForm = (NewsForm) form;
-            newsDAO.setConnection(connection);
             String[] delete = request.getParameterValues(Const.DELETE);
             String dId = request.getParameter(Const.ID);
 
             if(delete != null){
                 for(String str: delete){
-                    id = Integer.parseInt(str);
+                    id = Long.parseLong(str);
                     newsDAO.remove(id);
                 }
             } else if(dId != null){
-                id = Integer.parseInt(dId);
+                id = Long.parseLong(dId);
                 newsDAO.remove(id);
             }
 
             newsForm.setNewsList(newsDAO.getList());
+
         } catch (Exception e){
             logger.info(Const.EX_DELETE + id, e);
             return mapping.findForward(Const.LIST);
@@ -127,22 +117,21 @@ public class NewsAction extends LookupDispatchAction {
     }
 
     public ActionForward save(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        Connection connection = pool.getConnection();
-        connection.setAutoCommit(false);
-        NewsForm newsForm = (NewsForm) form;
-        newsDAO.setConnection(connection);
-        int id = newsForm.getNewsMessage().getId();
 
+        NewsForm newsForm = (NewsForm) form;
+        Long id = newsForm.getNewsMessage().getId();
         try{
             if (id == 0){
                 newsDAO.save(newsForm.getNewsMessage());
             } else {
                 newsDAO.update(newsForm.getNewsMessage());
             }
+
         }catch (Exception e){
             logger.info(Const.EX_SAVE, e);
             return mapping.findForward(Const.CR_MODIFY);
         }
+
         request.setAttribute(Const.NEWS, newsForm.getNewsMessage());
         return mapping.findForward(Const.VIEW);
     }

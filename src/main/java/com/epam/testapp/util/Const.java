@@ -1,25 +1,9 @@
 package com.epam.testapp.util;
 
-
 import java.sql.Date;
 
 public class Const{
 
-//    ConnectionPool
-    public static final String C_CREATE_CONN = "Can't crate connection";
-    public static final String C_CLOSE_CONN = "Can't close connection";
-
-//    NewsDAO
-    public static final String ERR_LIST = "Error with get list";
-    public static final String C_SAVE= "Can't save News";
-    public static final String C_UPDATE= "Can't update News with id=";
-    public static final String ERR_UPDATE = "Error with Update News";
-    public static final String C_DELETE = "Can't delete News";
-    public static final String ERR_DELETE = "Error with delete News";
-    public static final String C_SELECT = "Can't select News";
-    public static final String ERR_SELECT = "Error with fetchById";
-    public static final String COMMIT_EX = "Commit exception";
-    public static final String ROLLBACK_EX = "Rollback exception";
 
 //    LocaleAction
     public static final String STRUTS_LOCALE = "org.apache.struts.action.LOCALE";
